@@ -13,8 +13,23 @@
 }
 
 .caption {
+  margin-top: 15%;
   color: black;
   font-weight: bold;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+
+.display-4{
+  font-size: 75px;
+}
+
+footer {
+  margin-top: 15%;
+  line-height: 20%;
+  padding: 15px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  height: 30%;
 }
