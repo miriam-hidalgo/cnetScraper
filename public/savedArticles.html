@@ -8,14 +8,12 @@
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"
     ></script>
-
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
     />
-
-    <link rel="stylesheet" href="./css/style.css" type="text/css" />
-    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+    <script src="./assets/js/app.js"></script>
   </head>
 
   <body>
@@ -42,7 +40,7 @@
             >
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Save Articles</a>
+            <a class="nav-link" href="./savedArticles.html">Saved Articles</a>
           </li>
           <li class="nav-item">
             <button type="button" class="btn btn-warning" data-toggle="button">
@@ -65,19 +63,28 @@
       <h3>CNET Edition</h3>
     </div>
 
-    <!--Saved Articles -->
+    <!--No new articles card -->
     <!-- <div class="container">
-      <div id="articlesDiv">
+      <div class="noArticles">
         <div class="card">
-          <a href=""></a>     
-        </div>    
+          <div class="card-header">Uh oh! Looks like we don't have any new articles!</div>     -->
+
+        <!--Options card-->
+        <!-- <div class="options">
+            <div class="card">
+              <div class="card-header">What would you like to do?</div>
+              <div class="card-body">
+                <a href="">Try Scraping New Articles</a>
+                <a href="">Go to Saved Articles</a>
+              </div>
+            </div>
+          </div> 
+        </div>
       </div>
     </div> -->
-      
+
     <!-- Footer -->
     <footer class="footer bg-primary"><p>CNET Mongo Scraper</p></footer>
 
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-    <!-- <script src="app.js"></script> -->
   </body>
 </html>
