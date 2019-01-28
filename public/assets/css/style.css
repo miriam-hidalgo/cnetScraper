@@ -5,11 +5,12 @@
 
 .jumbotron {
   height: 500px;
-  background-image: url("../assets/img/img1.jpg");
+  background-image: url("../img/img1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 1;
   z-index: 1;
+  box-shadow: 5px 10px 20px lightslategray;
 }
 
 .caption {
@@ -23,8 +24,35 @@
   font-size: 75px;
 }
 
+
+.card{
+  box-shadow: 3px 3px 30px lightslategray;
+  line-height: 0.2;
+}
+
+.card div{
+  font-size: 25px;
+  padding-bottom: 0%;
+}
+
+.card a{
+  font-size: 30px;
+  background: rgb(63, 63, 63);
+  color: white;
+}
+
+.card button{
+  height: 50px;
+  width: 100px;
+  align-self: flex-end;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+  background: green;
+}
+
 footer {
-  margin-top: 15%;
+  margin-top: 5%;
   line-height: 20%;
   padding: 15px 0;
   color: white;
