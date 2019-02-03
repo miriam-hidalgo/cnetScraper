@@ -6,6 +6,6 @@ const ArticleSchema = new mongoose.Schema({
   link: String
 })
 
-const Article = mongoose.model('article', ArticleSchema);
+const article = mongoose.model('article', ArticleSchema);
 
-module.exports = Article;
+module.exports = article;

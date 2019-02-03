@@ -21,13 +21,4 @@ $.getJSON("/articles", function(data){
     $("#btn-clear").click(function() {
         $("#articlesDiv").hide();
     });
-
-
-
-
-
-
-
-
-
 });

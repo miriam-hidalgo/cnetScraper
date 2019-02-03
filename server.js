@@ -29,7 +29,7 @@ app.use(express.static("public"));
 // If deployed, use the deployed database. Otherwise use the local cnetScraper database
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/cnetScraper"
 
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 app.get('/', (req, res) => {
@@ -56,13 +56,26 @@ app.get("/scrape", function(req, res) {
     result.author = $(this).find($('.name')).text().trim();
     result.link = $(this).find('a').attr('href');
     console.log(result)
-    db.Article.create(result)
-    .then(function(dbArticle) {
-      console.log(dbArticle)
+    db.article.create(result)
+    .then(function(dbarticle) {
+      console.log(dbarticle)
     })
       });
     });
 }); 
+
+app.get("/articles", function(req, res) {
+  // Grab every document in the Articles collection
+  db.article.find({})
+    .then(function(dbarticle) {
+      // If we were able to successfully find Articles, send them back to the client
+      res.json(dbarticle);
+    })
+    .catch(function(err) {
+      // If an error occurred, send it to the client
+      res.json(err);
+    });
+});
 
 // Start the server
 app.listen(PORT, function() {
