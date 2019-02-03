@@ -26,7 +26,10 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/cnetScraper", { useNewUrlParser: true });
+// If deployed, use the deployed database. Otherwise use the local cnetScraper database
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/cnetScraper"
+
+mongoose.connect(MONGODB_URI);
 
 // Routes
 app.get('/', (req, res) => {
