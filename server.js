@@ -57,11 +57,15 @@ app.get("/scrape", function(req, res) {
     result.link = $(this).find('a').attr('href');
     console.log(result)
     db.article.create(result)
-    .then(function(dbarticle) {
-      console.log(dbarticle)
-    })
+      .then(function(dbarticle) {
+        console.log(dbarticle)
+      })
+      .catch(function(err) {
+        // If an error occurred, send it to the client
+        res.json(err);
       });
     });
+  });
 }); 
 
 app.get("/articles", function(req, res) {
